@@ -1,22 +1,17 @@
-import {createStore} from 'redux';
+import {createStore, bindActionCreators} from 'redux';
 import counter from './reduser';
-import {inc, dec, res} from './actions';
+import * as action from './actions';
 
 const store = createStore(counter);
 const {dispatch} = store;
 
+const {inc, dec, res} = bindActionCreators(action, dispatch);
 
-document.getElementById('inc').addEventListener('click', () => {
-    dispatch(inc())
-});
+document.getElementById('inc').addEventListener('click', inc);
 
-document.getElementById('dec').addEventListener('click', () => {
-    dispatch(dec())
-});
+document.getElementById('dec').addEventListener('click', dec);
 
-document.getElementById('res').addEventListener('click', () => {
-    dispatch(res())
-});
+document.getElementById('res').addEventListener('click', res);
 
 //  функция обновляет counter
 const update = () => {
