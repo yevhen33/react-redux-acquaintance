@@ -18,7 +18,7 @@
     margin-bottom: 34px;
 }
 
-#counter {
+.counter_wraper h1 {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -40,7 +40,6 @@
     height: 65px;
     border-radius: 4px;
     display: flex;
-    /* align-items: center; */
 }
 .btn:not(:last-of-type){
     margin-right: 38px;
@@ -60,9 +59,3 @@
 .btn-res{
     background: #CF1C1C;
 }
-/* .btn-upl{
-    background: #9B0F9E;
-}
-.btn-dwn{
-    background: #30D9CF;
-} */
